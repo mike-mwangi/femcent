@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { useWeb3 } from '@3rdweb/hooks'
-// import Dashboard from './Dashboard'
+import Dashboard from './Dashboard'
 
 export default function Home() {
   const { address, connectWallet } = useWeb3()
@@ -62,3 +62,5 @@ const Details = styled.div`
   font-weight: 500;
   color: #282b2f;
 `
+
+
