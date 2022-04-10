@@ -38,9 +38,9 @@ const Header = ({walletAddress, sanityTokens, thirdWebTokens, connectWallet}) =>
             </WalletAddress>
       </WalletLink>
 
-      <Button style={{ backgroundColor: '#3773f5', color: '#000'}}>
+      {/* <Button style={{ backgroundColor: '#3773f5', color: '#000'}}>
         Buy
-      </Button>
+      </Button> */}
 
       <Link href={'/?transfer=1'}>
         <Button>Send/ Receive</Button>
