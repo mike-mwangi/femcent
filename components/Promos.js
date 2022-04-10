@@ -18,6 +18,13 @@ const Promos = () => {
         <Placeholder />
         <Additional style={{ color: '#3773f5' }}><a href="https://www.youtube.com/watch?v=pm2WPY8RG9s&list=PLlrxD0HtieHi99pmroflQ2BUURV_qQa47">Watch</a></Additional>
       </OfferCard>
+
+      <OfferCard>
+        <Title>History of Assets</Title>
+        <Description>View historical data of assets here</Description>
+        <Placeholder />
+        <Additional style={{ color: '#3773f5' }}><a href="https://coinmarketcap.com/currencies/tether/">View Charts</a></Additional>
+      </OfferCard>
     </Wrapper>
   )
 }

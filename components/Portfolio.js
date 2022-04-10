@@ -85,6 +85,7 @@ useEffect(() => {
               </TableRow>
             </TableItem>
             <Divider />
+
             <div>
               {coins.map(coin => (
                 <div key={coin.name}>
@@ -93,6 +94,36 @@ useEffect(() => {
                 </div>
               ))}
             </div>
+
+            </Table>
+             </PortfolioTable>
+
+             <PortfolioTable>
+            <TableItem>
+                <Title>My Goals</Title>
+            </TableItem>
+            <Divider/>
+            <Table>
+            <TableItem>
+              <TableRow>
+                <div style={{ flex: 3 }}>Goal</div>
+                <div style={{ flex: 2 }}>Amount to be saved</div>
+                <div style={{ flex: 1 }}>Amount saved</div>
+                <div style={{ flex: 0, color: '#0a0b0d' }}>
+                  <BsThreeDotsVertical />
+                </div>
+              </TableRow>
+            </TableItem>
+            <Divider />
+
+            {/* <div>
+              {coins.map(coin => (
+                <div key={coin.name}>
+                  <Coin coin={coin} />
+                  <Divider />
+                </div>
+              ))}
+            </div> */}
 
             </Table>
              </PortfolioTable>
