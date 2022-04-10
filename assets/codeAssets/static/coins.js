@@ -4,8 +4,31 @@ import dogeLogo from '../assets/doge.png'
 import ethLogo from '../assets/eth.png'
 import lunaLogo from '../assets/luna.png'
 import solLogo from '../assets/sol.png'
+import tetherLogo from '../assets/tether.png'
+import femcentLogo from '../assets/femcent.png'
 
 export const coins = [
+  {
+    name: 'Tether',
+    sign: 'USDT',
+    logo: tetherLogo,
+    balanceUsd: 200.32,
+    balanceCoin: 6.35667736,
+    priceUsd: 1.00,
+    change: -0.74,
+    allocation: 41.89,
+  },
+  {
+    name: 'FemCent',
+    sign: 'FCC',
+    logo: femcentLogo,
+    balanceUsd: 230.32,
+    balanceCoin: 6.35667736,
+    priceUsd: 5.32,
+    change: -4.74,
+    allocation: 41.89,
+  },
+
   {
     name: 'Bitcoin',
     sign: 'BTC',
@@ -16,16 +39,16 @@ export const coins = [
     change: -4.74,
     allocation: 41.89,
   },
-  {
-    name: 'Solana',
-    sign: 'CRV',
-    logo: solLogo,
-    balanceUsd: 120.2,
-    balanceCoin: 6.35667736,
-    priceUsd: 5.32,
-    change: 4.74,
-    allocation: 41.89,
-  },
+  // {
+  //   name: 'Solana',
+  //   sign: 'CRV',
+  //   logo: solLogo,
+  //   balanceUsd: 120.2,
+  //   balanceCoin: 6.35667736,
+  //   priceUsd: 5.32,
+  //   change: 4.74,
+  //   allocation: 41.89,
+  // },
   {
     name: 'Polygon',
     sign: 'MATIC',
@@ -46,24 +69,24 @@ export const coins = [
     change: 6.24,
     allocation: 17.89,
   },
-  {
-    name: 'Terra',
-    sign: 'LUNA',
-    logo: lunaLogo,
-    balanceUsd: 1.2,
-    balanceCoin: 3.35664236,
-    priceUsd: 5.22,
-    change: -5.24,
-    allocation: 17.89,
-  },
-  {
-    name: 'Dogecoin 🌙',
-    sign: 'DOGE',
-    logo: dogeLogo,
-    balanceUsd: 1.2,
-    balanceCoin: 3.35664236,
-    priceUsd: 5.22,
-    change: 200.24,
-    allocation: 17.89,
-  },
+  // {
+  //   name: 'Terra',
+  //   sign: 'LUNA',
+  //   logo: lunaLogo,
+  //   balanceUsd: 1.2,
+  //   balanceCoin: 3.35664236,
+  //   priceUsd: 5.22,
+  //   change: -5.24,
+  //   allocation: 17.89,
+  // },
+  // {
+  //   name: 'Dogecoin 🌙',
+  //   sign: 'DOGE',
+  //   logo: dogeLogo,
+  //   balanceUsd: 1.2,
+  //   balanceCoin: 3.35664236,
+  //   priceUsd: 5.22,
+  //   change: 200.24,
+  //   allocation: 17.89,
+  // },
 ]

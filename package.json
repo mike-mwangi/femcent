@@ -14,11 +14,15 @@
     "@3rdweb/sdk": "^1.42.0",
     "@ethersproject/bignumber": "^5.6.0",
     "@sanity/image-url": "^1.0.1",
+    "ethers": "^5.6.2",
     "next": "12.1.4",
     "react": "18.0.0",
+    "react-chartjs-2": "^4.1.0",
     "react-dom": "18.0.0",
     "react-icons": "^4.3.1",
-    "styled-components": "^5.3.5"
+    "react-modal": "^3.14.4",
+    "styled-components": "^5.3.5",
+    "yarn": "^1.22.18"
   },
   "devDependencies": {
     "eslint": "8.12.0",
