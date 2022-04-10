@@ -1,16 +1,34 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react';
 import styled from 'styled-components'
 import { FaWallet } from 'react-icons/fa'
+import { client } from '../../lib/sanity'
+import imageUrlBuilder from '@sanity/image-url'
 
 const Transfer = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => {
     const [amount, setAmount] = useState()
     const [recipient, setRecipient] = useState('')
+    const [imageUrl, setImageUrl] = useState(null)
+    const [activeThirdWebToken, setActiveThirdWebToken] = useState()
+
+    useEffect(() => {
+        const activeToken = thirdWebTokens.find(
+            token => token.address === selectedToken.contractAddress
+        )
+        console.log(activeToken, selectedToken, 'works perfect');
+
+        setActiveThirdWebToken(activeToken)
+
+
+    }, [thirdWebTokens, selectedToken])
 
     useEffect(() => {
         console.log(selectedToken, 'working well');
+        // const url = imageUrlBuilder(client).image(selectedToken.logo).url()
+        // console.log(url)
+        // setImageUrl(url)
 
 
-    }, [selectedToken, setAction, thirdWebTokens, walletAddress])
+    }, [selectedToken])
 
 
 
@@ -47,9 +65,9 @@ const Transfer = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => 
                 <FieldName>Pay with</FieldName>
                 <CoinSelectList>
                     <Icon>
-                        <img src=''/>
+                        {/* <img src={imageUrl}/> */}
                     </Icon>
-                    <CoinName>Tether</CoinName>
+                    <CoinName>{selectedToken.name}</CoinName>
                 </CoinSelectList>
             </Row>
         </TransferForm>
@@ -58,11 +76,11 @@ const Transfer = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => 
         </Row>
         <Row>
         <BalanceTitle>
-            {/* {selectedToken.symbol} */}
+            {selectedToken.symbol}
              Balance
         </BalanceTitle>
         <Balance>
-          {/* {balance} {selectedToken.symbol} */}
+         {selectedToken.symbol}
           56
         </Balance>
       </Row>

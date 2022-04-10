@@ -18,17 +18,21 @@ const TransferModal = ({sanityTokens, thirdWebTokens, walletAddress}) => {
     const selectedModal = option => {
         switch (option) {
             case 'send':
-                return <Transfer
-                selectedToken={sanityTokens}
-                setAction={setAction}
-                thirdWebTokens={thirdWebTokens}
-                walletAddress={walletAddress}/>
+                return (
+                <Transfer
+                  selectedToken={selectedToken}
+                  setAction={setAction}
+                  thirdWebTokens={thirdWebTokens}
+                  walletAddress={walletAddress}
+                  />
+                )
 
             case 'receive':
                 return <h2>Receive</h2>
 
             default:
-                break;
+                return <h2>Receive</h2>
+
         }
     }
 
