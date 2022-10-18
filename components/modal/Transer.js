@@ -69,7 +69,7 @@ const Transfer = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => 
                 type="number"
                 value={amount}
                 onChange={e => setAmount(e.target.value)}/>
-                <span>FCC</span>
+                <span>{selectedToken.symbol}</span>
             </FlexInputContainer>
             <Warning style={{ color: amount && '#0a0b0d' }}>
                  Amount is a required field
@@ -91,7 +91,8 @@ const Transfer = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => 
             <Divider/>
             <Row>
                 <FieldName>Pay with</FieldName>
-                <CoinSelectList>
+                <CoinSelectList
+                onClick={() => setAction('select')}>
                     <Icon>
                         <img src={imageUrl}/>
                     </Icon>
