@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Transfer from './Transer'
 import CoinSelector from './CoinSelector'
 import { CirclesWithBar } from  'react-loader-spinner'
+import Receive from './Receive';
 
 const TransferModal = ({sanityTokens, thirdWebTokens, walletAddress}) => {
     const [action, setAction] = useState('send')
@@ -30,7 +31,13 @@ const TransferModal = ({sanityTokens, thirdWebTokens, walletAddress}) => {
                 )
 
             case 'receive':
-                return <h2>Receive</h2>
+                return (
+                  <Receive
+                    setAction={setAction}
+                    selectedToken={selectedToken}
+                    walletAddress={walletAddress}
+                  />
+                )
             case 'select':
               return (
                 <CoinSelector
