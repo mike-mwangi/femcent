@@ -35,11 +35,11 @@ const Receive = ({ setAction, selectedToken, walletAddress }) => {
         <Row>
           <div>
             <Title>{selectedToken.symbol} Address</Title>
-            <Address>{selectedToken.contractAddress}</Address>
+            <Address>{walletAddress}</Address>
           </div>
           <CopyButton
             onClick={() => {
-              navigator.clipboard.writeText(selectedToken.contractAddress)
+              navigator.clipboard.writeText(walletAddress)
               setCopied(true)
             }}
           >
