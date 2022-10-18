@@ -44,12 +44,22 @@ const TransferModal = ({sanityTokens, thirdWebTokens, walletAddress}) => {
               )
             case 'transferring':
               return (
-                <div>
-                  <h2>transferring...</h2>
+                <div
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    fontSize: '1.5rem',
+                }}
+                >
+                  <h2>Transfer in progress...</h2>
                   <CirclesWithBar
                     height="100"
                     width="100"
-                    color="#4fa94d"
+                    color="#3773f5"
                     wrapperStyle={{}}
                     wrapperClass=""
                     visible={true}
@@ -59,12 +69,25 @@ const TransferModal = ({sanityTokens, thirdWebTokens, walletAddress}) => {
                     ariaLabel='circles-with-bar-loading'
                   />
                 </div>
-
               )
 
-
             case 'transferred':
-              return <h2 style={{color: 'green'}}>transferred</h2>
+              return (
+                <div
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    fontSize: '2rem',
+                    fontWeight: '600',
+                    color: '#27ad75',
+                  }}
+              >
+                Transfer complete
+              </div>
+              )
             default:
                 return <h2>Receive</h2>
 
