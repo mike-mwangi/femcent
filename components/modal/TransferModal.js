@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import styled from 'styled-components'
 import Transfer from './Transer'
 import CoinSelector from './CoinSelector'
+import { CirclesWithBar } from  'react-loader-spinner'
 
 const TransferModal = ({sanityTokens, thirdWebTokens, walletAddress}) => {
     const [action, setAction] = useState('send')
@@ -41,6 +42,29 @@ const TransferModal = ({sanityTokens, thirdWebTokens, walletAddress}) => {
                 walletAddress={walletAddress}
                 />
               )
+            case 'transferring':
+              return (
+                <div>
+                  <h2>transferring...</h2>
+                  <CirclesWithBar
+                    height="100"
+                    width="100"
+                    color="#4fa94d"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                    outerCircleColor=""
+                    innerCircleColor=""
+                    barColor=""
+                    ariaLabel='circles-with-bar-loading'
+                  />
+                </div>
+
+              )
+
+
+            case 'transferred':
+              return <h2 style={{color: 'green'}}>transferred</h2>
             default:
                 return <h2>Receive</h2>
 
