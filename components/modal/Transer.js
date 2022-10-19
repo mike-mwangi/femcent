@@ -172,7 +172,7 @@ const Warning = styled.div`
   /* TRouBLe */
   padding: 1rem 0 2rem 0;
   text-align: center;
-  color: #8a919e;
+  color: #ff0f0f;
 `
 
 const Divider = styled.div`
