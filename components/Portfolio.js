@@ -42,10 +42,10 @@ useEffect(() => {
         setWalletBalance(totalBalance.reduce((acc, curr) => acc + curr, 0))
 
     }
+    // console.log(sanityTokens);
 
     calculateTotalBalance()
 }, [sanityTokens, thirdWebTokens, tokenToKES, walletAddress])
-
 
     return (
         <Wrapper>
@@ -196,4 +196,3 @@ const Title = styled.div`
   font-size: 1.5rem;
   font-weight: 600;
 `
-

@@ -62,5 +62,3 @@ const Details = styled.div`
   font-weight: 500;
   color: #282b2f;
 `
-
-

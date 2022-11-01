@@ -31,6 +31,18 @@ const Header = ({walletAddress, sanityTokens, thirdWebTokens, connectWallet}) =>
     <Wrapper>
       <Title>FEMCENT</Title>
       <ButtonsContainer>
+      <Button>
+        Dashboard
+      </Button>
+
+      <Button style={{ backgroundColor: '#27ad75', color: '#000'}}>
+        Deposit/Withdraw
+      </Button>
+
+      <Link href={'/?transfer=1'}>
+        <Button>Send/ Receive</Button>
+      </Link>
+
         {walletAddress ? (
             <WalletLink>
               <WalletLinkTitle>Wallet Connected</WalletLinkTitle>
@@ -43,16 +55,6 @@ const Header = ({walletAddress, sanityTokens, thirdWebTokens, connectWallet}) =>
               Connect Wallet
             </Button>
           )}
-
-      <Button style={{ backgroundColor: '#27ad75', color: '#000'}}>
-        Deposit/Withdraw
-      </Button>
-
-        <Link href={'/?transfer=1'}>
-          <Button>Send/ Receive</Button>
-
-        </Link>
-
 
       </ButtonsContainer>
 

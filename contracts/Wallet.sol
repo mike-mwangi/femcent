@@ -109,7 +109,7 @@ contract multiSig {
         uint256 transaction_ID = transaction_ID_incre++;
 
         // generate and populate a transaction struct in memory as transaction proposition
-        //   no initial signatures
+        // no initial signatures
         Transaction memory pending_transaction;
         pending_transaction.from = msg.sender;
         pending_transaction.to = to;
@@ -117,8 +117,8 @@ contract multiSig {
         pending_transaction.current_signature_count = 0;
 
         // add proposed transaction to the transactions mapping datastructure
-        //    tran_id is position in ds
-        //    id is added to awaiting confirmation array
+        // tran_id is position in ds
+        // id is added to awaiting confirmation array
         transactions[transaction_ID] = pending_transaction;
         pending_transactions.push(transaction_ID);
 

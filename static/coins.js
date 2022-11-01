@@ -1,12 +1,12 @@
-import btcLogo from '../assets/btc.png'
+// import btcLogo from '../assets/btc.png'
 import maticLogo from '../assets/matic.png'
-import dogeLogo from '../assets/doge.png'
-import ethLogo from '../assets/eth.png'
-import lunaLogo from '../assets/luna.png'
-import solLogo from '../assets/sol.png'
+// import dogeLogo from '../assets/doge.png'
+// import ethLogo from '../assets/eth.png'
+// import lunaLogo from '../assets/luna.png'
+// import solLogo from '../assets/sol.png'
 import tetherLogo from '../assets/tether.png'
 import femcentLogo from '../assets/femcent.png'
-import harmonyLogo from '../assets/harmony.png'
+// import harmonyLogo from '../assets/harmony.png'
 
 export const coins = [
   {

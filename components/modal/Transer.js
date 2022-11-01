@@ -156,12 +156,12 @@ const FlexInput = styled.input`
   margin-right: 1rem;
   font-size: 4.5rem;
   color: #3773f5;
+  -moz-appearance: textfield;
   &::-webkit-outer-spin-button,
   ::-webkit-inner-spin-button {
     -webkit-appearance: none;
   }
 `
-
 
 const TransferForm = styled.div`
   border: 1px solid #282b2f;

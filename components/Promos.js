@@ -5,10 +5,10 @@ const Promos = () => {
     <Wrapper>
       <OfferCard>
         <Title>Yield earned</Title>
-        <Description>Earn upto 12.84% yearly interest on your coins</Description>
+        <Description>Earn upto 12% yearly interest on your coins</Description>
         <Placeholder />
         <Additional style={{ fontSize: '1.5rem' }}>
-           <span>12.84% APY</span>
+           <span>12% APY</span>
         </Additional>
       </OfferCard>
 
