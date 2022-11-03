@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styled from 'styled-components'
-import Transfer from './Transer'
+import Transfer from './Transfer'
 import CoinSelector from './CoinSelector'
 import { CirclesWithBar } from  'react-loader-spinner'
 import Receive from './Receive';

@@ -23,7 +23,7 @@ const Transfer = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => 
     }, [thirdWebTokens, selectedToken])
 
     useEffect(() => {
-        console.log(selectedToken, 'working well');
+        // console.log(selectedToken, 'working well');
         const url = imageUrlBuilder(client).image(selectedToken.logo).url()
         // console.log(url)
         setImageUrl(url)
@@ -52,7 +52,7 @@ const Transfer = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => 
       recipient,
       amount.toString().concat('000000000000000000')
       )
-      console.log(tx)
+      // console.log(tx)
       setAction('transferred')
     } else {
       console.error('missing data')

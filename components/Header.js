@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import Modal from 'react-modal'
 import { useRouter } from 'next/router'
 import TransferModal from './modal/TransferModal'
+import DepositModal from './modal/DepositModal'
+
 import Link from 'next/link'
 
 Modal.setAppElement('#__next')
@@ -35,9 +37,11 @@ const Header = ({walletAddress, sanityTokens, thirdWebTokens, connectWallet}) =>
         Dashboard
       </Button>
 
-      <Button style={{ backgroundColor: '#27ad75', color: '#000'}}>
-        Deposit/Withdraw
-      </Button>
+      <Link href={'/?deposit=1'}>
+        <Button style={{ backgroundColor: '#27ad75', color: '#000'}}>
+          Deposit/Withdraw
+        </Button>
+      </Link>
 
       <Link href={'/?transfer=1'}>
         <Button>Send/ Receive</Button>
@@ -63,13 +67,25 @@ const Header = ({walletAddress, sanityTokens, thirdWebTokens, connectWallet}) =>
         onRequestClose={() => router.push('/')}
         style={customStyles}
       >
-
-
         <TransferModal
           thirdWebTokens={thirdWebTokens}
           sanityTokens={sanityTokens}
           walletAddress={walletAddress}
         />
+
+      </Modal>
+
+      <Modal
+        isOpen={!!router.query.deposit}
+        onRequestClose={() => router.push('/')}
+        style={customStyles}
+      >
+        <DepositModal
+          thirdWebTokens={thirdWebTokens}
+          sanityTokens={sanityTokens}
+          walletAddress={walletAddress}
+        />
+
       </Modal>
 
     </Wrapper>
