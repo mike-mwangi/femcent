@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import imageUrlBuilder from '@sanity/image-url'
+import TransferModal from './TransferModal'
+import DepositModal from './DepositModal'
 import { client } from '../../lib/sanity'
 import { FaCheck } from 'react-icons/fa'
 
@@ -48,7 +50,8 @@ const CoinItem = ({
       }}
       onClick={() => {
         setSelectedToken(token)
-        setAction('send')
+        // Todo: Redirect based on the modal opened(TransferModal or DepositModal)
+        setAction('deposit')
       }}
     >
       <Main>

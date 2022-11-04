@@ -27,12 +27,8 @@ const CoinSelector = (
                 thirdWebTokens={thirdWebTokens}
                 sanityTokens={sanityTokens}
                 setAction={setAction}
-
-
                 />
             ))}
-
-
 
           </CoinList>
         </Wrapper>

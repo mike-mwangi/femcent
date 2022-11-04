@@ -1,11 +1,47 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import { FaPhoneAlt } from 'react-icons/fa'
+import { client } from '../../lib/sanity'
+import imageUrlBuilder from '@sanity/image-url'
 
 
-export const Deposit = () => {
+
+export const Deposit = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => {
     const [amount, setAmount] = useState()
     const [mobileNumber, setMobileNumber] = useState('')
+    const [imageUrl, setImageUrl] = useState(null)
+    const [activeThirdWebToken, setActiveThirdWebToken] = useState()
+    const [balance, setBalance] = useState('Fetching...')
+
+    useEffect(() => {
+        const activeToken = thirdWebTokens.find(
+            token => token.address === selectedToken.contractAddress
+        )
+        // console.log( activeToken, 'works well');
+
+        setActiveThirdWebToken(activeToken)
+
+    }, [thirdWebTokens, selectedToken])
+
+    useEffect(() => {
+        // console.log(selectedToken, 'working well');
+        const url = imageUrlBuilder(client).image(selectedToken.logo).url()
+        // console.log(url)
+        setImageUrl(url)
+    }, [selectedToken])
+
+    useEffect(() => {
+      const getBalance = async () => {
+        const balance = await activeThirdWebToken.balanceOf(walletAddress)
+        setBalance(balance.displayValue)
+        // console.log(balance.displayValue);
+      }
+
+      if (activeThirdWebToken) {
+        getBalance()
+      }
+
+  }, [activeThirdWebToken])
 
 
   return (
@@ -38,12 +74,12 @@ export const Deposit = () => {
             <Divider/>
             <Row>
                 <FieldName>Receive</FieldName>
-                <CoinSelectList>
+                <CoinSelectList onClick={() => setAction('select')}>
                     <Icon>
                         <img
-                            src='https://images.unsplash.com/photo-1640833906651-6bd1af7aeea3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGNyeXB0b3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'/>
+                            src={imageUrl}/>
                     </Icon>
-                    <CoinName>USDC</CoinName>
+                    <CoinName>{selectedToken.name}</CoinName>
                 </CoinSelectList>
             </Row>
         </TransferForm>
@@ -51,8 +87,8 @@ export const Deposit = () => {
             <Continue>Continue</Continue>
         </Row>
         <Row>
-            <BalanceTitle>USDC Balance</BalanceTitle>
-            <Balance>0.00</Balance>
+            <BalanceTitle>{selectedToken.symbol} Balance</BalanceTitle>
+            <Balance>{balance} {selectedToken.symbol}</Balance>
         </Row>
     </Wrapper>
   )

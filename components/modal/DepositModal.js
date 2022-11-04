@@ -1,11 +1,15 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import Deposit from './Deposit'
+import CoinSelector from './CoinSelector'
 
 
-export const DepositModal = () => {
+
+export const DepositModal = ({sanityTokens, thirdWebTokens, walletAddress}) => {
     // Deposit fiat to crypto
     const [action, setAction] = useState('deposit')
+    const [selectedToken, setSelectedToken] = useState(sanityTokens[0])
+
 
     const selectedStyle = {
         color: '#3773f5',
@@ -18,7 +22,24 @@ export const DepositModal = () => {
     const selectedModal = option => {
         switch (option) {
             case 'deposit':
-                return <Deposit/>
+                return ( <Deposit
+                    selectedToken={selectedToken}
+                    setAction={setAction}
+                    thirdWebTokens={thirdWebTokens}
+                    walletAddress={walletAddress}
+                    />
+                )
+            case 'select':
+                return (
+                    <CoinSelector
+                    setAction={setAction}
+                    selectedToken={selectedToken}
+                    setSelectedToken={setSelectedToken}
+                    sanityTokens={sanityTokens}
+                    thirdWebTokens={thirdWebTokens}
+                    walletAddress={walletAddress}
+                    />
+                )
             case 'withdraw':
                 return <h2>Withdraw</h2>
             default:
