@@ -42,6 +42,7 @@ const CoinItem = ({
     getImgUrl()
     getBalance()
   }, [])
+  
 
   return (
     <Wrapper
@@ -51,7 +52,7 @@ const CoinItem = ({
       onClick={() => {
         setSelectedToken(token)
         // Todo: Redirect based on the modal opened(TransferModal or DepositModal)
-        setAction('deposit')
+        setAction('send')
       }}
     >
       <Main>

@@ -32,7 +32,7 @@ const Dashboard = ({address}) => {
                     sanityTokens.map(token => sdk.getTokenModule(token.contractAddress))
 
                 )
-
+                
                 sanityTokens.map(token => console.log(sdk.getTokenModule))
 
         }

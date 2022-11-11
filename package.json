@@ -30,6 +30,7 @@
     "react-modal": "^3.14.4",
     "react-moralis": "^1.4.2",
     "styled-components": "^5.3.5",
+    "vercel": "^28.4.17",
     "wagmi": "^0.7.5",
     "yarn": "^1.22.18"
   },
