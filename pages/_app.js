@@ -1,8 +1,8 @@
 import '../styles/globals.css'
 import { ThirdwebWeb3Provider } from '@3rdweb/hooks'
-// import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 
-const supportedChainIds = [4, 80001]
+// fantom chain ID - 4002
+const supportedChainIds = [4, 4002]
 const connectors = {
   injected: {},
 }

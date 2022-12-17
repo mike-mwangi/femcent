@@ -6,16 +6,15 @@ import Sidebar from '../components/Sidebar'
 import { ethers } from 'ethers'
 import { ThirdwebSDK } from '@3rdweb/sdk';
 
+// fantom network url - https://rpc.testnet.fantom.network/
 const sdk = new ThirdwebSDK(
     new ethers.Wallet(
         process.env.NEXT_PUBLIC_METAMASK_KEY,
         ethers.getDefaultProvider(
-            'https://matic-mumbai.chainstacklabs.com/'
+            'https://rpc.testnet.fantom.network/'
         )
     )
 )
-
-
 
 const Dashboard = ({address}) => {
     const [sanityTokens, setSanityTokens] = useState([])
@@ -32,7 +31,7 @@ const Dashboard = ({address}) => {
                     sanityTokens.map(token => sdk.getTokenModule(token.contractAddress))
 
                 )
-                
+
                 sanityTokens.map(token => console.log(sdk.getTokenModule))
 
         }

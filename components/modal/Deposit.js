@@ -4,8 +4,6 @@ import { FaPhoneAlt } from 'react-icons/fa'
 import { client } from '../../lib/sanity'
 import imageUrlBuilder from '@sanity/image-url'
 
-
-
 export const Deposit = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => {
     const [amount, setAmount] = useState()
     const [mobileNumber, setMobileNumber] = useState('')

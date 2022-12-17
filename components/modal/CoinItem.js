@@ -43,7 +43,6 @@ const CoinItem = ({
     getBalance()
   }, [])
   
-
   return (
     <Wrapper
       style={{

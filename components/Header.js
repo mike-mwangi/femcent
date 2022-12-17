@@ -9,7 +9,6 @@ import Link from 'next/link'
 
 Modal.setAppElement('#__next')
 
-
 const Header = ({walletAddress, sanityTokens, thirdWebTokens, connectWallet}) => {
   const router = useRouter()
 

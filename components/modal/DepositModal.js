@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import Deposit from './Deposit'
 import CoinSelector from './CoinSelector'
 
-
-
 export const DepositModal = ({sanityTokens, thirdWebTokens, walletAddress}) => {
     // Deposit fiat to crypto
     const [action, setAction] = useState('deposit')

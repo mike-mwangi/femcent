@@ -19,7 +19,6 @@ const Transfer = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => 
 
         setActiveThirdWebToken(activeToken)
 
-
     }, [thirdWebTokens, selectedToken])
 
     useEffect(() => {
@@ -58,8 +57,6 @@ const Transfer = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => 
       console.error('missing data')
     }
   }
-
-
 
     return (
     <Wrapper>
