@@ -8,6 +8,7 @@ import tetherLogo from '../assets/tether.png'
 import femcentLogo from '../assets/femcent.png'
 // import harmonyLogo from '../assets/harmony.png'
 
+
 export const coins = [
   {
     name: 'Tether',

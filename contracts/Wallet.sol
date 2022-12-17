@@ -209,7 +209,7 @@ contract multiSig {
         return curr_time_lock;
     }
 
-    //
+    
     function multi_sig_balance() public view returns (uint256) {
         return address(this).balance;
     }
